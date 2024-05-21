@@ -1,3 +1,5 @@
+# Table of contents
+
 * [About](README.md)
 * [License](LICENSE)
 * [Using Vagrant to install CentOS on VirtualBox](vagrant_virtualbox_centos7/README.md)
