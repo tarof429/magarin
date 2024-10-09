@@ -1,6 +1,6 @@
 # Installing CentOS 7 on KVM Using Kickstart
 
-edhat-based Linux generates a kickstart file that can be used to automatically install the OS. 
+Redhat-based Linux generates a kickstart file that can be used to automatically install the OS. 
 
 
 First, install cdrtools.
