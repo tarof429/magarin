@@ -27,10 +27,16 @@ dnf update
 dnf upgrade
 ```
 
-AlmaLinux 9 seems to have issues with console login by default. You can use virt-viewer to login through the console, which can be handy if you don't know the IP of the VM.
+AlmaLinux 9 doesn't let you login through the console by default. You can use virt-viewer to login through the console, which can be handy if you don't know the IP of the VM.
 
 ```sh
 sudo virt-viewer --connect qemu:///system --wait almalinux9
+```
+
+To fix this, use grubby.
+
+```sh
+grubby --args=console=ttyS0,115200 --update-kern 0
 ```
 
 AlmaLinux 9 uses NetworkManager to configure networking. Under /etc/NetworkManager/system-connections, create a file like the following:
