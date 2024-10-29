@@ -39,6 +39,14 @@ To fix this, use grubby.
 grubby --args=console=ttyS0,115200 --update-kern 0
 ```
 
+You can also make this change for all kernels.
+
+```sh
+grubby --update-kernel ALL --args="console=ttyS0,115200 rootdelay=10"
+```
+
+Now if you reboot, you can access the boot menu in virt-menu to choose a kernel or edit the argument (for example, to add rd.break).
+
 AlmaLinux 9 uses NetworkManager to configure networking. Under /etc/NetworkManager/system-connections, create a file like the following:
 
 ```sh
@@ -55,6 +63,8 @@ dns=8.8.8.8,8.8.4.4
 gateway=192.168.1.1
 method=manual
 ```
+
+You could also look into using nmcli to configure networking.
 
 After making the change, restart the NetworkManager service.
 
