@@ -6,7 +6,7 @@ See Installing CentOS 7 using virt-install with KVM (manually).
 
 ## Steps
 
-First download the ISO for RockyLinux 8 9 from the cloest mirror at https://rockylinux.org/download and copy it to /var/lib/libvirt/boot.
+First download the ISO for RockyLinux 9 from the closest mirror at https://rockylinux.org/download and copy it to /var/lib/libvirt/boot.
 
 Launch a VM. To get the correct OS variant, run:
 
