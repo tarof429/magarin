@@ -2,4 +2,4 @@
 
 ## What is this?
 
-An anthology of techniques for creating VMs.
+A collection of scripts for installing VMs.
