@@ -1,4 +1,4 @@
-# Installing ArchLinux using virt-install with KVM (manually)
+# Installing ArchLinux using virt-install with KVM (manually and with EFI)
 
 ## Steps
 
@@ -59,13 +59,13 @@ mkfs.xfs /dev/root_vg/root_lv
 
 ```sh
 mount --mkdir /dev/mapper/root_vg_root_lv /mnt
-mount --mkdir /dev/vda1 /mnt/boot
+mount --mkdir /dev/vda1 /mnt/boot/efi
 ```
 
 ### Install ArchLinux
 
 ```sh
-pacstrap -K /mnt base linux-lts linux-firmware netctl
+pacstrap -K /mnt base linux linux-firmware netctl
 ```
 
 Generate fstab by running:
@@ -100,7 +100,7 @@ mkinitcpio -P
 Install grub. There are several places where it can be installed; see https://wiki.archlinux.org/title/EFI_system_partition. We will use /boot.
 
 ```sh
-grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 ```
 
 Make sure that you specify /dev/vda, which is the disk.

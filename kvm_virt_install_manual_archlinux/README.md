@@ -58,7 +58,7 @@ mount --mkdir /dev/mapper/root_vg_root_lv /mnt
 ### Install ArchLinux
 
 ```sh
-pacstrap -K /mnt base linux-lts linux-firmware netctl
+pacstrap -K /mnt base linux linux-firmware netctl
 ```
 
 Generate fstab by running:
